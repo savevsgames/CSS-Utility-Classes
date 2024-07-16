@@ -4,7 +4,7 @@
 
 This repository contains a set of utility classes for CSS, designed to provide a consistent and customizable way to apply common styles to HTML elements. These classes are intended to be used in conjunction with a CSS preprocessor like Sass or Less.
 
-You can view the current state of the project at: [LINK](<(https://savevsgames.github.io/CSS-Utility-Classes)>)
+You can view the current state of the project at: [PROJECT LINK](https://savevsgames.github.io/CSS-Utility-Classes)
 
 ## License
 
