@@ -2,8 +2,12 @@
   --primary: #333;
   --secondary: #fff;
   --tertiary: #ff8b21;
-  --background-primary: #fff;
-  --background-secondary: #333;
+  --bg-primary: #fff;
+  --bg-secondary: #333;
+  --bg-tertiary: #ff8b21;
+  --gray-1: #f9f9f9;
+  --gray-2: #f4f4f4;
+  --gray-3: #e0e0e0;
 }
 
 * {
@@ -15,7 +19,7 @@
 body {
   font-family: "Sergoe UI", "Trebuchet MS", "Lucida Sans Unicode",
     "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  background-color: var(--background-primary);
+  background-color: var(--bg-tertiary);
 }
 
 header {
@@ -23,7 +27,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background-color: var(--background-secondary);
+  background-color: var(--bg-secondary);
   color: var(--secondary);
 }
 
@@ -57,6 +61,17 @@ main {
   width: 100vw;
 }
 
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
 .container {
   width: 80%;
   height: 80%;
@@ -64,7 +79,7 @@ main {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
-  background-color: var(--background-primary);
+  backdrop-filter: blur(10px);
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
@@ -76,7 +91,7 @@ main {
   align-items: center;
   flex-direction: column;
   flex: 1 0 auto;
-  background-color: var(--background-primary);
+  background-color: var(--bg-primary);
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
@@ -85,7 +100,10 @@ main {
 
 .card:hover {
   transform: tranlateY(10px);
-  transition: transform 1s;
+  transition: all 1s;
+  background-color: var(--bg-secondary);
+  color: var(--secondary);
+
 }
 
 .top {
@@ -122,9 +140,6 @@ p:first-line {
 --------------------------------
  CSS UTILITY CLASSES BEGIN HERE
 --------------------------------
-*/
-
-// CUSTOM COLOR THEMES
 
 // TEXT UTILITIES
 
@@ -189,3 +204,143 @@ p:first-line {
 .bg-primary {
   background-color: var(--background-primary);
 }
+
+.bg-secondary {
+  background-color: var(--background-secondary);
+}
+
+.bg-tertiary {
+  background-color: var(--tertiary);
+}
+
+.bg-none {
+  background-color: transparent;
+}
+
+// BORDER UTILITIES
+
+.border {
+  border: 1px solid var(--primary);
+}
+
+.border-none {
+  border: none;
+}
+
+.border-radius-sm {
+  border-radius: 5px;
+}
+
+.border-radius-md {
+  border-radius: 10px;
+}
+
+.border-radius-lg {
+  border-radius: 20px;
+}
+
+.border-radius-full {
+  border-radius: 100%;
+}
+
+// BOX SHADOW UTILITIES
+
+.shadow-sm {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+.shadow-md {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.shadow-lg {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.shadow-none {
+  box-shadow: none;
+}
+
+// DISPLAY UTILITIES
+
+.glassmorphism {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+// GRADIENT UTILITIES
+
+.gradient-primary {
+  background: linear-gradient(90deg, var(--primary), var(--tertiary));
+}
+
+.gradient-secondary {
+  background: linear-gradient(90deg, var(--secondary), var(--tertiary));
+}
+
+.gradient-tertiary {
+  background: linear-gradient(90deg, var(--tertiary), var(--tertiary));
+}
+
+.gradient-none {
+  background: none;
+}
+
+// TRANSITION UTILITIES
+
+.transition {
+  transition: all 0.5s ease;
+}
+
+.transition-slow {
+  transition: all 3s ease;
+}
+
+.transition-fast {
+  transition: all 0.3s ease;
+}
+
+.transition-none {
+  transition: none;
+}
+
+// ANIMATION SPEED UTILITIES
+
+.animate {
+  animation: fadeIn 1s ease;
+}
+
+.animate-slow {
+  animation: fadeIn 3s ease;
+}
+
+.animate-fast {
+  animation: fadeIn 0.3s ease;
+}
+
+.animate-none {
+  animation: none;
+}
+
+// TRANSFORM UTILITIES
+
+.transform-none {
+  transform: none;
+}
+
+.transform-y-up {
+  transform: translateY(10px);
+}
+
+.transform-y-down {
+  transform: translateY(-10px);
+}
+
+.transform-x-left {
+  transform: translateX(-10px);
+}
+
+.transform-x-right {
+  transform: translateX(10px);
+} */
