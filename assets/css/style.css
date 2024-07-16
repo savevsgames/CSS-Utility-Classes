@@ -1,3 +1,11 @@
+:root {
+  --primary: #333;
+  --secondary: #fff;
+  --tertiary: #ff8b21;
+  --background-primary: #fff;
+  --background-secondary: #333;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -7,7 +15,7 @@
 body {
   font-family: "Sergoe UI", "Trebuchet MS", "Lucida Sans Unicode",
     "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: var(--background-primary);
 }
 
 header {
@@ -15,8 +23,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background-color: #333;
-  color: #fff;
+  background-color: var(--background-secondary);
+  color: var(--secondary);
 }
 
 nav ul {
@@ -32,13 +40,13 @@ nav li {
 
 nav a {
   text-decoration: none;
-  color: #fff;
+  color: var(--secondary);
   font-weight: bold;
   font-size: 1.3rem;
 }
 
 nav a:hover {
-  color: #ff8b21;
+  color: var(--tertiary);
 }
 
 main {
@@ -51,32 +59,133 @@ main {
 
 .container {
   width: 80%;
+  height: 80%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 2fr 1fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
-  background-color: #fff;
+  background-color: var(--background-primary);
   padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
-.card-middle {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
+.card {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #f4f4f4;
+  flex: 1 0 auto;
+  background-color: var(--background-primary);
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   gap: 20px;
 }
 
+.card:hover {
+  transform: tranlateY(10px);
+  transition: transform 1s;
+}
+
+.top {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.middle {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.bottom {
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+p:first-line {
+  color: var(--tertiary);
+}
+
+/* 
+--------------------------------
+ CSS UTILITY CLASSES BEGIN HERE
+--------------------------------
+*/
+
+// CUSTOM COLOR THEMES
+
+// TEXT UTILITIES
+
 .text-aligned {
   text-align: center;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-line-through {
+  text-decoration: line-through;
+}
+
+.text-overline {
+  text-decoration: overline;
+}
+
+.text-none {
+  text-decoration: none;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+// BACKGROUND UTILITIES
+
+.bg-primary {
+  background-color: var(--background-primary);
 }
