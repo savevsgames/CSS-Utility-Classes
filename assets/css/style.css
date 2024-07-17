@@ -12,6 +12,14 @@
   --planet-1-b: #40534c;
   --planet-1-c: #677d6a;
   --planet-1-d: #d6bd98;
+  --planet-2-a: #006769;
+  --planet-2-b: #40a578;
+  --planet-2-c: #9dde8b;
+  --planet-2-d: #e6ff94;
+  --planet-3-a: #254336;
+  --planet-3-b: #6b8a7a;
+  --planet-3-c: #b7b597;
+  --planet-3-d: #dad3be;
 }
 
 * {
@@ -127,10 +135,12 @@ main {
 .planet-wrapper {
   position: absolute;
   top: 30%;
-  left: -20%;
+  left: -10%;
   width: 100px;
   height: 100px;
   z-index: -1;
+
+  transition: transform 3s, width 3s, height 3s, ease-in-out 3s;
 }
 
 .planet-1 {
@@ -140,6 +150,7 @@ main {
   background-color: var(--planet-1-b);
   border-radius: 100%;
   box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
+  transition: transform 3s, width 3s, height 3s, ease-in-out 3s;
 }
 
 .planet-1::before {
@@ -151,6 +162,7 @@ main {
   height: 90px;
   background-color: var(--planet-1-d);
   border-radius: 78% 100% 100% 78%;
+  transition: transform 3s, width 3s, height 3s, ease-in-out 3s;
 }
 
 .planet-1::after {
@@ -162,33 +174,164 @@ main {
   height: 98px;
   background-color: var(--planet-1-c);
   border-radius: 100%;
+  transition: transform 3s, width 3s, height 3s, ease-in-out 3s;
 }
 
-.card:hover {
+.planet-2 {
+  z-index: 2;
+  position: relative;
+  left: 600%;
+  bottom: 200%;
+  width: 100px;
+  height: 100px;
+  background-color: var(--planet-2-a);
+  border-radius: 100%;
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
+  transition: transform 3s, width 3s, height 3s, ease-in-out 3s;
+}
+
+.planet-2::before {
+  z-index: 2;
+  content: "";
+  position: absolute;
+  top: 2%;
+  left: 27%;
+  width: 70px;
+  height: 98px;
+  background-color: var(--planet-2-d);
+  border-radius: 78% 100% 100% 78%;
+  transition: transform 3s, width 3s, height 3s, ease-in-out 3s;
+}
+
+.planet-2::after {
+  z-index: 2;
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 20%;
+  width: 65px;
+  height: 98px;
+  background-color: var(--planet-2-c);
+  border-radius: 100%;
+  transition: transform 3s, width 3s, height 3s, ease-in-out 3s;
+}
+
+.planet-3 {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100px;
+  height: 100px;
+  background-color: var(--planet-3-a);
+  border-radius: 100%;
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
+  transition: transform 3s, width 3s, height 3s, ease-in-out 3s;
+}
+
+.planet-3::before {
+  content: "";
+  position: absolute;
+  top: 2%;
+  left: 25%;
+  width: 75px;
+  height: 98px;
+  background-color: var(--planet-3-d);
+  border-radius: 90% 100% 100% 90%;
+  transition: transform 3s, width 3s, height 3s, ease-in-out 3s;
+}
+
+.planet-3::after {
+  content: "";
+  position: absolute;
+  top: 8%;
+  left: 44%;
+  width: 55px;
+  height: 78px;
+  background-color: var(--planet-3-c);
+  border-radius: 100%;
+  transition: transform 3s, width 3s, height 3s, ease-in-out 3s;
+}
+
+.p-1:hover {
   transform: translateY(10px);
   transition: all 1s;
   background-color: var(--bg-secondary);
   color: var(--secondary);
 }
 
-.card:hover .planet-1 {
-  transform: translateX(800%);
-  transition: transform 3s, rotate 3s, width 3s, height 3s, ease 3s;
-  rotate: 5deg;
+.p-1:hover .planet-1 {
+  transform: translate(400%, 100%);
+  transition: transform 3s, width 3s, height 3s, ease-in-out 3s;
+
   width: 200px;
   height: 200px;
+  box-shadow: 5px 5px 2px rgba(-2px, -20px, 5px, 0.4);
 }
 
-.card:hover .planet-1::before {
+.p-1:hover .planet-1::before {
   width: 140px;
   height: 180px;
-  transition: transform 3s, rotate 3s, width 3s, height 3s ease-in-out;
+  transition: transform 3s, width 3s, height 3s, ease-in-out 3s;
 }
 
-.card:hover .planet-1::after {
+.p-1:hover .planet-1::after {
   width: 130px;
   height: 196px;
-  transition: transform 3s, rotate 3s, width 3s, height 3s ease-in-out;
+  transition: transform 3s, width 3s, height 3s, ease-in-out 3s;
+}
+
+.p-2:hover {
+  transform: translateY(10px);
+  transition: all 1s;
+  background-color: var(--bg-secondary);
+  color: var(--secondary);
+}
+
+.p-2:hover .planet-2 {
+  transform: translate(-400%, 100%);
+  transition: transform 3s, width 3s, height 3s, ease-in-out 3s;
+  width: 200px;
+  height: 200px;
+  box-shadow: 5px 5px 2px rgba(-2px, -20px, 5px, 0.4);
+}
+
+.p-2:hover .planet-2::before {
+  width: 140px;
+  height: 190px;
+  transition: transform 3s, width 3s, height 3s, ease-in-out 3s;
+}
+
+.p-2:hover .planet-2::after {
+  width: 134px;
+  height: 196px;
+  transition: transform 3s, width 3s, height 3s, ease-in-out 3s;
+}
+
+.p-3:hover {
+  transform: translateY(10px);
+  transition: all 1s;
+  background-color: var(--bg-secondary);
+  color: var(--secondary);
+}
+
+.p-3:hover .planet-3 {
+  transform: translate(250%, -100%);
+  transition: transform 3s, width 3s, height 3s, ease-in-out 3s;
+  width: 200px;
+  height: 200px;
+  box-shadow: 5px 5px 2px rgba(-2px, -20px, 5px, 0.4);
+}
+
+.p-3:hover .planet-3::before {
+  width: 140px;
+  height: 180px;
+  transition: transform 3s, width 3s, height 3s, ease-in-out 3s;
+}
+
+.p-3:hover .planet-3::after {
+  width: 110px;
+  height: 156px;
+  transition: transform 3s, width 3s, height 3s, ease-in-out 3s;
 }
 
 .top {
