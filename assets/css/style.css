@@ -78,14 +78,14 @@ main {
 
 .background-image {
   position: relative;
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   margin: auto;
   z-index: -1;
 }
 
 .background-image img {
-  margin-top: 5%;
+  margin: auto;
   width: 100%;
   height: 100%;
   max-width: 100%;
@@ -127,10 +127,10 @@ main {
 .planet-wrapper {
   position: absolute;
   top: 30%;
-  left: -40%;
+  left: -20%;
   width: 100px;
   height: 100px;
-  z-index: 1;
+  z-index: -1;
 }
 
 .planet-1 {
@@ -150,7 +150,7 @@ main {
   width: 70px;
   height: 90px;
   background-color: var(--planet-1-d);
-  border-radius: 70% 100% 100% 70%;
+  border-radius: 78% 100% 100% 78%;
 }
 
 .planet-1::after {
@@ -172,8 +172,8 @@ main {
 }
 
 .card:hover .planet-1 {
-  transform: translateX(60rem);
-  transition: transform 3s, rotate 3s, width 3s, height 3s ease-in-out;
+  transform: translateX(800%);
+  transition: transform 3s, rotate 3s, width 3s, height 3s, ease 3s;
   rotate: 5deg;
   width: 200px;
   height: 200px;
